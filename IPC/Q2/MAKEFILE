@@ -1,0 +1,18 @@
+CC = gcc
+
+TARGET = Q2
+SRCS = Q2.c
+
+.PHONY: all clean
+
+all: $(TARGET)
+
+$(TARGET): $(SRCS)
+	$(CC) -o $@ $^
+	./$(TARGET) ls -a | grep MAKEFILE
+
+clean:
+	rm -f $(TARGET)
+
+test: 
+	

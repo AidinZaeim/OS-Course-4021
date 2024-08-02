@@ -1,0 +1,23 @@
+test1:
+    matrix size: 20
+    window size: 5
+
+    without multi threading: 0.000029
+    with multi threading: 0.001566
+
+test2:
+    matrix size: 200
+    window size: 50
+
+    without multi threading: 0.264257
+    with multi threading: 0.410465
+
+test3:
+    matrix size: 1000
+    window size: 250
+
+    without multi threading: 269.885454
+    with multi threading: 123.006055 
+
+    همانطور که قابل مشاهده است به هر چه مقادیر درحال بزرگ تر شدن هستند،نسبت زمان پردازش در حال کاهش است
+    

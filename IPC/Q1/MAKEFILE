@@ -1,0 +1,17 @@
+CC = gcc
+
+TARGET = Q1
+SRCS = Q1.c
+
+.PHONY: all clean
+
+all: $(TARGET)
+
+$(TARGET): $(SRCS)
+	$(CC) -o $@ $^ 
+	./$(TARGET)
+
+clean:
+	rm -f $(TARGET)
+
+	

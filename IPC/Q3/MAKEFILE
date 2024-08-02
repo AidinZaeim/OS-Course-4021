@@ -1,0 +1,23 @@
+CC = gcc
+
+LDFLAGS = -lrt
+
+TARGET = Q3
+
+SRCS = Q3.c
+
+OBJS = $(SRCS:.c=.o)
+
+.PHONY: all clean
+
+all: $(TARGET)
+
+$(TARGET): $(OBJS)
+	$(CC) -o $@ $^ $(LDFLAGS)
+	./$(TARGET)
+
+%.o: %.c
+	$(CC) -c -o $@ $< 
+
+clean:
+	rm -f $(OBJS) $(TARGET)
